@@ -11,6 +11,7 @@ let halfSum  = targetNum**.5;
 let smallArray = [];
 let bigArray = [];
 
+
 for (i=1; i<halfSum; i++) {
   if (targetNum%i == 0) {
     smallArray.push(i);
@@ -25,7 +26,7 @@ console.log("all array primes" + allArrayPrimes);
 
 
 function testPrime (x) {
-  for (i=2; i<x; i++) {
+  for (i=2; i<x**.5; i++) {
     if (x%i ==0) {
       return false;
     }

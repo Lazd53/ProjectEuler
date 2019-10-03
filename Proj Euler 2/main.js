@@ -20,6 +20,9 @@ fibArray.pop();
 // removes items from array that do not evenly divide by 2 (ie odd numbers)
 fibArray = fibArray.filter( x => x%2==0);
 
+
+
+
 // sum up all of the fibArray left
 let theResults = fibArray.reduce((sum, num) => sum + num);
 

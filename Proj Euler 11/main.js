@@ -51,9 +51,15 @@ let arrays = [[08,02,22,97,38,15,00,40,00,75,04,05,07,78,52,12,50,77,91,08],
 ]
 let largestProduct = [0,[]];
 
+//testing left to right and top to bottom
 for (x = 0; x<20; x ++) {
   leftToRight(x);
   topToBottom(x);
+  for (y = 0; y<20; y++) {
+
+    let testCase = arrays[x][y] * arrays[x+1][y+1] * arrays[x+2][y+2] * arrays[x+3][y+3];
+    testForLargest(testCase, [x,y]);
+  }
 }
 
 
@@ -81,6 +87,10 @@ function testForLargest(x, location) {
     largestProduct[0] = x;
     largestProduct[1] = location;
   }
+}
+
+function testUndefined(x,y) {
+  if (arrays[x,y])
 }
 
 let theResults = largestProduct[0];
